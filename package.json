@@ -1,6 +1,6 @@
 {
   "name": "@feizheng/next-filesize",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Get filesize based on filesize.js.",
   "homepage": "https://github.com/afeiship/next-filesize",
   "author": {

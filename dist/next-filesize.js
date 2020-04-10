@@ -2,8 +2,8 @@
  * name: @feizheng/next-filesize
  * description: Get filesize based on filesize.js.
  * url: https://github.com/afeiship/next-filesize
- * version: 1.0.0
- * date: 2020-04-10 11:54:45
+ * version: 1.0.1
+ * date: 2020-04-10 12:08:39
  * license: MIT
  */
 
@@ -12,10 +12,13 @@
   var nx = global.nx || require('@feizheng/next-js-core2');
   var filesize = require('filesize');
   var fs = require('fs');
+  var DEFAULT_OPTIONS = { trim: true };
 
   nx.filesize = function (inFilename, inOptions) {
+    var options = nx.mix(null, DEFAULT_OPTIONS, inOptions);
     var stats = fs.statSync(inFilename);
-    return filesize(stats.size, inOptions);
+    var res = filesize(stats.size, inOptions);
+    return options.trim ? res.replace(/\s+/, '') : res;
   };
 
   if (typeof module !== 'undefined' && module.exports) {

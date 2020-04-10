@@ -6,7 +6,7 @@ describe('api.basic test', () => {
     var filename = '__tests__/index.html';
     console.log(nx.filesize(filename), nx.filesize(filename, { bits: true }));
 
-    expect(nx.filesize(filename)).toBe('421 B');
-    expect(nx.filesize(filename, { bits: true })).toBe('3.29 Kb');
+    expect(nx.filesize(filename)).toBe('421B');
+    expect(nx.filesize(filename, { bits: true })).toBe('3.29Kb');
   });
 });
