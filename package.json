@@ -39,5 +39,10 @@
   },
   "dependencies": {
     "filesize": "^6.1.0"
-  }
+  },
+  "keywords": [
+    "next",
+    "filesize",
+    "file"
+  ]
 }

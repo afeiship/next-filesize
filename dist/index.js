@@ -3,7 +3,7 @@
  * description: Get filesize based on filesize lib.
  * homepage: https://github.com/afeiship/next-filesize
  * version: 1.0.0
- * date: 2020-11-22 12:24:17
+ * date: 2020-11-22 13:20:48
  * license: MIT
  */
 
