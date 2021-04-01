@@ -2,8 +2,8 @@
  * name: @jswork/next-filesize
  * description: Get filesize based on filesize lib.
  * homepage: https://github.com/afeiship/next-filesize
- * version: 1.0.0
- * date: 2021-04-01 09:18:40
+ * version: 1.0.1
+ * date: 2021-04-01 09:19:37
  * license: MIT
  */
 
