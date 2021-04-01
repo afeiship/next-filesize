@@ -3,7 +3,7 @@
  * description: Get filesize based on filesize lib.
  * homepage: https://github.com/afeiship/next-filesize
  * version: 1.0.0
- * date: 2020-11-22 13:20:48
+ * date: 2021-04-01 09:18:40
  * license: MIT
  */
 
@@ -12,15 +12,15 @@
   var nx = global.nx || require('@jswork/next');
   var filesize = require('filesize');
   var fs = require('fs');
-  var DEFAULT_OPTIONS = { trim: true };
+  var DEFAULT_OPTIONS = { trim: true, format: true };
 
   nx.filesize = function (inFilename, inOptions) {
     var options = nx.mix(null, DEFAULT_OPTIONS, inOptions);
     var stats = fs.statSync(inFilename);
+    if (!options.format) return stats.size;
     var res = filesize(stats.size, inOptions);
     return options.trim ? res.replace(/\s+/, '') : res;
   };
-
 
   if (typeof module !== 'undefined' && module.exports) {
     module.exports = nx.filesize;
