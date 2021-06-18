@@ -4,13 +4,11 @@
   describe('api.basic test', () => {
     test('nx.filesize basic case', function () {
       var filename = '__tests__/index.html';
-      expect(nx.filesize(filename)).toBe('421B');
-      expect(nx.filesize(filename, { bits: true })).toBe('3.29Kb');
-    });
-
-    test('nx.filesize no format', function () {
-      var filename = '__tests__/index.html';
-      expect(nx.filesize(filename, { format: false })).toBe(421);
+      const res = nx.filesize(filename);
+      const res2 = nx.filesize(filename, { bits: true });
+      expect(res.sizeOf).toBe('421B');
+      expect(res2.sizeOf).toBe('3.29Kb');
+      expect(res.size).toBe(421);
     });
   });
 })();

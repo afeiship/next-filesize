@@ -15,9 +15,8 @@ npm install -S @jswork/next-filesize
 ```js
 import '@jswork/next-filesize';
 
-nx.filesize(filename) // '421B'
-nx.filesize(filename, { format: false }) // 421
-nx.filesize(filename, { bits: true }) // '3.29Kb'
+nx.filesize('/page/testfile.js', { bits: true });
+// { size: 421, sizeOf: '3.29Kb' }
 ```
 
 ## resources
