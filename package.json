@@ -1,6 +1,6 @@
 {
   "name": "@jswork/next-filesize",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Get filesize based on filesize lib.",
   "homepage": "https://github.com/afeiship/next-filesize",
   "author": {
@@ -43,6 +43,7 @@
   "keywords": [
     "next",
     "filesize",
-    "file"
+    "file",
+    "size"
   ]
 }
